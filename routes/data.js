@@ -9,7 +9,10 @@ router.get('/', function (req, res, next) {
     .map((text) => {
       return { 'text': text }
     })
-  res.send({ data })
+
+  setTimeout(() => {
+    res.send({ data })
+  }, 2000)
 })
 
 module.exports = router
